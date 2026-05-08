@@ -1822,6 +1822,7 @@ section {
 
   .pricing-signup-input {
     min-width: unset;
+    flex: none;
     height: 48px;
   }
 
