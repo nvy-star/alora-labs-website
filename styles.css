@@ -1848,6 +1848,16 @@ section {
     text-align: center;
   }
 
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-tagline {
+    max-width: 100%;
+  }
+
   .footer-top .footer-col-links {
     align-items: center;
   }
