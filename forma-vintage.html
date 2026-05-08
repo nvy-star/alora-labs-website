@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma Vintage — Alora Labs</title>
+    <meta name="description" content="Brand identity, creative direction, styling, and photography for Forma Vintage — a curated vintage fashion brand.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="stylesheet" href="case-study.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/bundled/lenis.min.js" defer></script>
+</head>
+<body>
+    <div class="announcement-banner" id="announcement-banner" role="banner">
+        <p class="announcement-text">Now booking for June &amp; July 2026</p>
+        <button class="announcement-close" id="announcement-close" aria-label="Close announcement">✕</button>
+    </div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-dot"  aria-hidden="true"></div>
+    <canvas id="grain-canvas" aria-hidden="true"></canvas>
+    <div class="pt-top"    aria-hidden="true"></div>
+    <div class="pt-bottom" aria-hidden="true"></div>
+
+    <div class="page-wrap">
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-text">Alora Labs</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+            </div>
+            <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+        <img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/Forma.jpg" alt="Forma Vintage" class="cs-hero-img">
+        <div class="cs-hero-overlay"></div>
+        <div class="cs-hero-content">
+            <div class="cs-hero-left">
+                <span class="cs-hero-service">Brand Identity · Photography · Art Direction · Etsy</span>
+                <h1 class="cs-hero-client">Forma<br>Vintage</h1>
+            </div>
+            <div class="cs-hero-right">
+                <span class="cs-hero-year">2024 – Present</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="cs-breadcrumb">
+        <div class="container">
+            <div class="cs-breadcrumb-inner">
+                <a href="portfolio.html">Portfolio</a>
+                <span class="cs-breadcrumb-sep">—</span>
+                <span class="cs-breadcrumb-current">Forma Vintage</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview -->
+    <section class="cs-overview">
+        <div class="container">
+            <div class="cs-overview-grid">
+                <div class="cs-overview-text">
+                    <span class="cs-overview-label">Overview</span>
+                    <h2 class="cs-overview-headline">A vintage brand built from scratch in one week.</h2>
+                    <p class="cs-overview-body">
+                        Forma is a self-initiated brand proving what happens when strategy, design, and execution align. Built entirely in-house, from brand identity and logo design to editorial product photography and Etsy storefront, Forma launched in a single week with a clear vision: curated vintage home goods positioned at the intersection of nostalgia and modern elegance.
+                    </p>
+                    <p class="cs-overview-body" style="margin-top: 1.2em;">
+                        The results speak to the strength of the foundation: a 46% sell-through rate and perfect 5-star reviews across all active listings. Every element — the geometric "F" mark, the warm cream and brown palette, the styled product photography — was intentionally designed to feel discovered, not manufactured. Forma is both a functioning business and a live portfolio piece, demonstrating what Alora Labs builds for clients: cohesive brand presence from concept to launch.
+                    </p>
+                </div>
+                <div class="cs-meta">
+                    <div class="cs-meta-row">
+                        <span class="cs-meta-label">Client</span>
+                        <span class="cs-meta-value">Forma, Self-Initiated</span>
+                    </div>
+                    <div class="cs-meta-row">
+                        <span class="cs-meta-label">Services</span>
+                        <span class="cs-meta-value">Brand Identity, Logo Design, Photography, Art Direction, Etsy Storefront, Content Strategy</span>
+                    </div>
+                    <div class="cs-meta-row">
+                        <span class="cs-meta-label">Year</span>
+                        <span class="cs-meta-value">2024 – Present</span>
+                    </div>
+                    <div class="cs-meta-row">
+                        <span class="cs-meta-label">Scope</span>
+                        <span class="cs-meta-value">Owned Brand</span>
+                    </div>
+                    <div class="cs-meta-row">
+                        <span class="cs-meta-label">Results</span>
+                        <span class="cs-meta-value">46% Sell-Through · 5&#9733; Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full-bleed feature image -->
+    <div class="cs-feature-img">
+        <img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3199.jpg" alt="Forma Vintage creative direction">
+    </div>
+
+    <!-- Branding -->
+    <section class="cs-work-section">
+        <div class="container">
+            <div class="cs-work-header">
+                <span class="cs-work-label">Branding</span>
+                <span class="cs-work-count">01</span>
+            </div>
+            <div class="cs-work-pair">
+                <div class="cs-work-pair-item">
+                    <img src="Images/Case%20studies/Forma%20Vintage/Branding/FREE-002-October-November.png" alt="Forma Vintage brand identity">
+                </div>
+                <div class="cs-work-pair-item">
+                    <img src="Images/Case%20studies/Forma%20Vintage/Branding/FREE-010-October-November.png" alt="Forma Vintage brand identity">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Direction, Styling & Photography -->
+    <section class="cs-work-section">
+        <div class="container">
+            <div class="cs-work-header">
+                <span class="cs-work-label">Creative Direction, Styling &amp; Photography</span>
+                <span class="cs-work-count">02</span>
+            </div>
+            <div class="cs-masonry">
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3068-3.jpg" alt="Forma Vintage shoot"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3086.jpg" alt="Forma Vintage shoot"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3209.jpg" alt="Forma Vintage shoot"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3216.jpg" alt="Forma Vintage shoot"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3251.jpg" alt="Forma Vintage shoot"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3267.jpg" alt="Forma Vintage shoot"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3278.jpg" alt="Forma Vintage shoot"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/1M9A3284.jpg" alt="Forma Vintage shoot"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/Content%20Creation.jpg" alt="Forma Vintage content creation"></div>
+                <div class="cs-masonry-item"><img src="Images/Case%20studies/Forma%20Vintage/Creative%20Direction%2C%20Styling%20%26%20Photography/Forma.jpg" alt="Forma Vintage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project -->
+    <a href="generations-marketplace.html" class="cs-next">
+        <div class="cs-next-text">
+            <span class="cs-next-eyebrow">Next Project</span>
+            <h2 class="cs-next-title">Generations<br>Marketplace</h2>
+            <span class="cs-next-cta">View Case Study →</span>
+        </div>
+        <div class="cs-next-img">
+            <img src="Images/Case%20studies/Generations%20Marketplace/Photography/Generations.jpg" alt="Generations Marketplace">
+        </div>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Alora-&-Forma-branding.png" alt="Alora Labs" class="footer-logo-img">
+                    <p class="footer-tagline">Boutique creative & marketing studio<br>based in Oakville, Ontario.</p>
+                </div>
+                <div>
+                    <p class="footer-col-title">Studio</p>
+                    <div class="footer-col-links">
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="services.html" class="footer-link">Services</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="footer-col-title">Connect</p>
+                    <div class="footer-col-links">
+                        <a href="https://instagram.com/aloralabsstudio" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+                        <a href="mailto:nivysekar@gmail.com" class="footer-link">Email Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Alora Labs. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/aloralabsstudio" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="animations.js" defer></script>
+    <script src="case-study.js" defer></script>
+</body>
+</html>

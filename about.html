@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Alora Labs</title>
+    <!-- SEO -->
+    <meta name="description" content="Alora Labs is a boutique creative & marketing studio built on seven years of senior brand and marketing experience — based in Oakville, ON.">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alora Labs">
+    <meta property="og:title" content="About — Alora Labs">
+    <meta property="og:description" content="Boutique creative & marketing studio built on senior-level brand, social, and creative direction expertise — based in Oakville, ON.">
+    <meta property="og:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <meta property="og:url" content="https://aloralabs.xyz/about.html">
+    <meta property="og:locale" content="en_CA">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About — Alora Labs">
+    <meta name="twitter:description" content="Boutique creative & marketing studio built on senior-level brand, social, and creative direction expertise — based in Oakville, ON.">
+    <meta name="twitter:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/bundled/lenis.min.js" defer></script>
+</head>
+<body>
+    <!-- Announcement banner -->
+    <div class="announcement-banner" id="announcement-banner" role="banner">
+        <p class="announcement-text">Now booking for June &amp; July 2026</p>
+        <button class="announcement-close" id="announcement-close" aria-label="Close announcement">✕</button>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-dot"  aria-hidden="true"></div>
+
+    <!-- Film grain overlay -->
+    <canvas id="grain-canvas" aria-hidden="true"></canvas>
+
+    <!-- Page transition — split curtain -->
+    <div class="pt-top"    aria-hidden="true"></div>
+    <div class="pt-bottom" aria-hidden="true"></div>
+
+    <!-- Page wrap — animated on transition -->
+    <div class="page-wrap">
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Alora Labs</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </div>
+            <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="label">The Studio</span>
+            <h1 class="page-title">Senior-level craft.<br><em>Boutique approach.</em></h1>
+            <p class="page-subtitle">
+                A creative & marketing studio built on seven years of hands-on brand,
+                social media, and creative direction experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Why Section -->
+    <section class="why-section">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-text">
+                    <span class="why-eyebrow">The Why</span>
+                    <h2 class="why-title">Born from the belief that every brand deserves to be <em>remembered.</em></h2>
+                    <div class="why-body">
+                        <p>
+                            Alora Labs was built after seven years of doing brand work from the inside —
+                            scaling social media audiences, orchestrating launches, and translating creative
+                            vision into measurable growth. We knew what worked. We also knew there was a
+                            better way to deliver it.
+                        </p>
+                        <p>
+                            A studio founded by a Bachelor of Design graduate from Toronto Metropolitan
+                            University with a track record in brands people actually pay attention to.
+                            Senior-level expertise without the agency overhead or the junior team handoffs.
+                        </p>
+                        <p>
+                            This is where experience meets creative courage. Strategy-grounded,
+                            artistically uncompromising. Work that bridges the gap between
+                            beautiful and effective — because the best brands do both.
+                        </p>
+                    </div>
+                </div>
+                <div class="why-image">
+                    <img src="Images/story.jpg" alt="Alora Labs studio">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">What Guides Us</span>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <span class="value-num">01</span>
+                    <h3 class="value-title">Creative<br><em>Excellence</em></h3>
+                    <p class="value-description">
+                        We believe in the power of thoughtful design and compelling storytelling.
+                        Every project is an opportunity to create something meaningful and memorable.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <span class="value-num">02</span>
+                    <h3 class="value-title">Strategic<br><em>Clarity</em></h3>
+                    <p class="value-description">
+                        Beautiful work means nothing without purpose. We anchor every creative
+                        decision in clear strategy and measurable objectives.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <span class="value-num">03</span>
+                    <h3 class="value-title">Honest<br><em>Partnership</em></h3>
+                    <p class="value-description">
+                        Your success is our success. We're an extension of your team —
+                        invested in your growth and committed to your vision, not just the deliverable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="about-process">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">How We Work</span>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <span class="process-step-num">01</span>
+                    <h3 class="process-step-title">Discovery</h3>
+                    <p class="process-step-desc">
+                        We listen before we create. Understanding your vision, audience,
+                        and goals informs every decision that follows.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <span class="process-step-num">02</span>
+                    <h3 class="process-step-title">Strategy</h3>
+                    <p class="process-step-desc">
+                        Grounded in your market position and objectives. We build a creative
+                        framework before a single pixel is placed.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <span class="process-step-num">03</span>
+                    <h3 class="process-step-title">Craft</h3>
+                    <p class="process-step-desc">
+                        Elevated execution, every detail considered. This is where artistry
+                        meets intention and concepts become reality.
+                    </p>
+                </div>
+                <div class="process-step">
+                    <span class="process-step-num">04</span>
+                    <h3 class="process-step-title">Launch</h3>
+                    <p class="process-step-desc">
+                        We deliver, monitor, and optimize. Not just a handoff —
+                        a partnership through execution and beyond.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-section">
+        <div class="cta-inner cta-content">
+            <div class="cta-text-col">
+                <h2 class="cta-title">Let's create<br><em>together.</em></h2>
+                <p class="cta-sub">Ready to elevate your brand? Let's talk.</p>
+            </div>
+            <div class="cta-action-col">
+                <a href="contact.html" class="btn btn--ghost-light">Start a Conversation</a>
+                <a href="portfolio.html" class="btn btn--ghost-light">View Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Alora-&-Forma-branding.png" alt="Alora Labs" class="footer-logo-img">
+                    <p class="footer-tagline">Boutique creative & marketing studio<br>based in Oakville, Ontario.</p>
+                </div>
+                <div>
+                    <p class="footer-col-title">Studio</p>
+                    <div class="footer-col-links">
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="services.html" class="footer-link">Services</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="footer-col-title">Connect</p>
+                    <div class="footer-col-links">
+                        <a href="https://instagram.com/aloralabsstudio" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+                        <a href="mailto:nivysekar@gmail.com" class="footer-link">Email Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Alora Labs. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/aloralabsstudio" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- /.page-wrap -->
+
+    <script src="script.js"></script>
+    <script src="animations.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alora Labs — Creative & Marketing Studio</title>
+    <!-- SEO -->
+    <meta name="description" content="Alora Labs is a boutique creative & marketing studio based in Oakville, ON. Senior-level branding, social media, content creation & creative direction for ambitious brands.">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alora Labs">
+    <meta property="og:title" content="Alora Labs — Creative & Marketing Studio">
+    <meta property="og:description" content="Boutique creative & marketing studio delivering branding, social media strategy, content creation, and creative direction for brands that mean business.">
+    <meta property="og:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <meta property="og:url" content="https://aloralabs.xyz/">
+    <meta property="og:locale" content="en_CA">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alora Labs — Creative & Marketing Studio">
+    <meta name="twitter:description" content="Boutique creative & marketing studio delivering branding, social media strategy, content creation, and creative direction for brands that mean business.">
+    <meta name="twitter:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/bundled/lenis.min.js" defer></script>
+</head>
+<body>
+    <!-- Announcement banner -->
+    <div class="announcement-banner" id="announcement-banner" role="banner">
+        <p class="announcement-text">Now booking for June &amp; July 2026</p>
+        <button class="announcement-close" id="announcement-close" aria-label="Close announcement">✕</button>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-dot"  aria-hidden="true"></div>
+
+    <!-- Film grain overlay -->
+    <canvas id="grain-canvas" aria-hidden="true"></canvas>
+
+    <!-- Page transition — split curtain -->
+    <div class="pt-top"    aria-hidden="true"></div>
+    <div class="pt-bottom" aria-hidden="true"></div>
+
+    <!-- Page wrap — animated on transition -->
+    <div class="page-wrap">
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Alora Labs</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </div>
+            <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section — 44% left / 56% right -->
+    <section class="hero">
+
+        <!-- Left panel — editorial text, anchored to bottom -->
+        <div class="hero-left">
+
+            <div class="hero-left-content">
+                <div class="hero-logo-badge">
+                    <img src="Alora-&-Forma-branding.png" alt="Alora Labs" class="hero-logo-img">
+                </div>
+                <p class="hero-tagline">Where <em>creative</em> vision meets <em>strategic</em> clarity.</p>
+                <div class="hero-small-image">
+                    <img src="Images/phone.png" alt="Alora Labs editorial">
+                </div>
+                <p class="hero-subtitle">
+                    Boutique studio delivering branding, social media, content creation, and creative direction for brands that mean business.
+                </p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn--filled">Start a Project</a>
+                    <a href="portfolio.html" class="btn">View Our Work</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll to Explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+
+        <!-- Right panel — large editorial image -->
+        <div class="hero-right">
+            <img src="Images/Hero1.jpg" alt="Alora Labs — Creative direction" class="hero-right-img">
+            <div class="hero-right-overlay">
+                <div class="hero-right-caption">
+                    <span class="label">Creative Studio</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Ticker Strip -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span class="ticker-item">Branding <span class="ticker-dot"></span> Website Design <span class="ticker-dot"></span> Social Media <span class="ticker-dot"></span> Content Creation <span class="ticker-dot"></span> Creative Direction <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Branding <span class="ticker-dot"></span> Website Design <span class="ticker-dot"></span> Social Media <span class="ticker-dot"></span> Content Creation <span class="ticker-dot"></span> Creative Direction <span class="ticker-dot"></span></span>
+            <span class="ticker-item">Branding <span class="ticker-dot"></span> Website Design <span class="ticker-dot"></span> Social Media <span class="ticker-dot"></span> Content Creation <span class="ticker-dot"></span> Creative Direction <span class="ticker-dot"></span></span>
+        </div>
+    </div>
+
+    <!-- Services Hover List -->
+    <section class="services-preview services-list">
+        <div class="container">
+
+            <div class="services-list-header">
+                <h2 class="display-md">What we<br><em>do best</em></h2>
+                <a href="services.html" class="btn">All Services</a>
+            </div>
+
+            <ul class="sl-list" role="list">
+
+                <li class="sl-item" data-index="0">
+                    <div class="sl-item-inner">
+                        <span class="sl-num" aria-hidden="true">01</span>
+                        <h3 class="sl-title">Brand Identity</h3>
+                        <span class="sl-arrow">→</span>
+                    </div>
+                </li>
+
+                <li class="sl-item" data-index="1">
+                    <div class="sl-item-inner">
+                        <span class="sl-num" aria-hidden="true">02</span>
+                        <h3 class="sl-title">Web & Graphic Design</h3>
+                        <span class="sl-arrow">→</span>
+                    </div>
+                </li>
+
+                <li class="sl-item" data-index="2">
+                    <div class="sl-item-inner">
+                        <span class="sl-num" aria-hidden="true">03</span>
+                        <h3 class="sl-title">Social Media</h3>
+                        <span class="sl-arrow">→</span>
+                    </div>
+                </li>
+
+                <li class="sl-item" data-index="3">
+                    <div class="sl-item-inner">
+                        <span class="sl-num" aria-hidden="true">04</span>
+                        <h3 class="sl-title">Content Creation</h3>
+                        <span class="sl-arrow">→</span>
+                    </div>
+                </li>
+
+                <li class="sl-item" data-index="4">
+                    <div class="sl-item-inner">
+                        <span class="sl-num" aria-hidden="true">05</span>
+                        <h3 class="sl-title">Creative Direction</h3>
+                        <span class="sl-arrow">→</span>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="sl-cta">
+                <a href="services.html" class="btn">Explore All Services</a>
+            </div>
+
+        </div>
+
+        <!-- Cursor-following float image — driven by JS -->
+        <div class="sl-float-img" aria-hidden="true">
+            <div class="sl-float-inner"></div>
+            <div class="sl-float-inner"></div>
+            <div class="sl-float-inner"></div>
+            <div class="sl-float-inner"></div>
+            <div class="sl-float-inner"></div>
+        </div>
+
+    </section>
+
+    <!-- Packages & Pricing Signup -->
+    <section class="pricing-signup">
+        <div class="pricing-signup-card">
+            <span class="label">Packages &amp; Pricing</span>
+            <h2 class="pricing-signup-title">Curious about<br><em>our rates?</em></h2>
+            <p class="pricing-signup-sub">Sign up with your email to receive a detailed guide with information about our packages, pricing, and FAQ's.</p>
+            <div class="pricing-signup-success" data-fs-success style="display:none;">
+                <p>Guide on its way! Check your inbox.</p>
+            </div>
+            <div class="pricing-signup-error" data-fs-error style="display:none;"></div>
+            <form id="pricing-form" class="pricing-signup-form">
+                <div class="pricing-signup-fields">
+                    <input type="text" name="name" placeholder="Your Name" class="pricing-signup-input" data-fs-field required>
+                    <input type="email" name="email" placeholder="Email Address" class="pricing-signup-input" data-fs-field required>
+                    <button type="submit" class="btn btn--filled pricing-signup-btn" data-fs-submit-btn>Send Me the Guide</button>
+                </div>
+                <span class="pricing-signup-field-error" data-fs-error="email"></span>
+            </form>
+        </div>
+    </section>
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#pricing-form', formId: 'meenlggk' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+    <!-- Our Approach Section -->
+    <section class="approach">
+        <div class="container">
+            <div class="approach-inner">
+
+                <div class="approach-text">
+                    <div>
+                        <span class="label" style="margin-bottom: 1.5rem; display: block;">Our Approach</span>
+                        <h2 class="approach-headline">Strategy-led.<br><em>Beautifully</em> executed.</h2>
+                        <p class="approach-body">
+                            We believe great work emerges at the intersection of intuition and intelligence.
+                            Every brand has a story worth telling — our role is to uncover that narrative,
+                            refine it, and bring it to life with purpose and precision.
+                        </p>
+                    </div>
+                    <div class="approach-pillars">
+                        <div class="approach-pillar">
+                            <span class="pillar-num">01</span>
+                            <span class="pillar-text">Discovery — we listen before we create</span>
+                        </div>
+                        <div class="approach-pillar">
+                            <span class="pillar-num">02</span>
+                            <span class="pillar-text">Strategy — grounded in your goals and market</span>
+                        </div>
+                        <div class="approach-pillar">
+                            <span class="pillar-num">03</span>
+                            <span class="pillar-text">Craft — elevated execution, every detail</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn" style="align-self: flex-start;">About the Studio</a>
+                </div>
+
+                <div class="approach-image">
+                    <img src="Images/desk.png" alt="Alora Labs studio approach">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Statement Band -->
+    <section class="statement-band">
+        <div class="statement-band-overlay"></div>
+        <div class="statement-band-content">
+            <h2 class="statement-band-title">Making Your Dream<br>Clients Fall in Love<br><em>With Your Brand</em></h2>
+            <a href="contact.html" class="statement-band-cta">Work With Me <span>——</span></a>
+        </div>
+    </section>
+
+    <!-- Selected Cases — Horizontal Scroll -->
+    <section class="cases">
+        <div class="cases-header container">
+            <span class="label">Selected Work</span>
+            <a href="portfolio.html" class="btn">Full Portfolio</a>
+        </div>
+        <div class="cases-track-wrap">
+            <button class="cases-arrow cases-arrow--left" id="cases-prev" aria-label="Previous">←</button>
+            <button class="cases-arrow cases-arrow--right" id="cases-next" aria-label="Next">→</button>
+            <div class="cases-track" id="cases-track">
+
+                <a href="kimberly-capone.html" class="case-card">
+                    <div class="case-card-img">
+                        <img src="Images/Design/Graphic%20Design.jpg" alt="Kimberly Capone Interior Design">
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-card-info">
+                            <span class="case-card-num">01</span>
+                            <h3 class="case-card-title">Kimberly Capone<br>Interior Design</h3>
+                            <p class="case-card-tags">Brand Identity + Photography + Video + Social Media + Web Design</p>
+                        </div>
+                        <span class="case-card-cta">View →</span>
+                    </div>
+                </a>
+
+                <a href="generations-marketplace.html" class="case-card">
+                    <div class="case-card-img">
+                        <img src="Images/Photography/Food%20%26%20Farm/1M9A0413.jpg" alt="Generations Marketplace">
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-card-info">
+                            <span class="case-card-num">02</span>
+                            <h3 class="case-card-title">Generations<br>Marketplace</h3>
+                            <p class="case-card-tags">Photography + Video + Social Media + Web Design</p>
+                        </div>
+                        <span class="case-card-cta">View →</span>
+                    </div>
+                </a>
+
+                <a href="forma-vintage.html" class="case-card">
+                    <div class="case-card-img">
+                        <img src="Images/Design/FREE-002-October-November.png" alt="Forma Vintage">
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-card-info">
+                            <span class="case-card-num">03</span>
+                            <h3 class="case-card-title">Forma<br>Vintage</h3>
+                            <p class="case-card-tags">Brand Identity + Photography + Etsy</p>
+                        </div>
+                        <span class="case-card-cta">View →</span>
+                    </div>
+                </a>
+
+                <a href="gillet-psychology.html" class="case-card">
+                    <div class="case-card-img">
+                        <img src="Images/Design/stationery-gillett.jpg" alt="Gillet Psychology">
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-card-info">
+                            <span class="case-card-num">04</span>
+                            <h3 class="case-card-title">Gillet<br>Psychology</h3>
+                            <p class="case-card-tags">Brand Identity + Print</p>
+                        </div>
+                        <span class="case-card-cta">View →</span>
+                    </div>
+                </a>
+
+                <a href="h3c.html" class="case-card">
+                    <div class="case-card-img">
+                        <img src="Images/Case%20studies/H3C/Branding/nexus.png" alt="H3C Healthcare">
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-card-info">
+                            <span class="case-card-num">05</span>
+                            <h3 class="case-card-title">H3C Healthcare<br>Communications</h3>
+                            <p class="case-card-tags">Presentation Design + Graphic Design</p>
+                        </div>
+                        <span class="case-card-cta">View →</span>
+                    </div>
+                </a>
+
+                <a href="alora-labs-brand.html" class="case-card">
+                    <div class="case-card-img">
+                        <img src="Images/Case%20studies/Alora%20Labs/Branding/ALORALABS.png" alt="Alora Labs">
+                    </div>
+                    <div class="case-card-body">
+                        <div class="case-card-info">
+                            <span class="case-card-num">06</span>
+                            <h3 class="case-card-title">Alora Labs</h3>
+                            <p class="case-card-tags">Brand Identity + Web Design + Social Media</p>
+                        </div>
+                        <span class="case-card-cta">View →</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="cta-section">
+        <div class="cta-inner cta-content">
+            <div class="cta-text-col">
+                <h2 class="cta-title">Ready to elevate<br><em>your brand?</em></h2>
+                <p class="cta-sub">Let's create something meaningful together.</p>
+            </div>
+            <div class="cta-action-col">
+                <a href="contact.html" class="btn btn--ghost-light">Start a Project</a>
+                <a href="portfolio.html" class="btn btn--ghost-light">View Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Alora-&-Forma-branding.png" alt="Alora Labs" class="footer-logo-img">
+                    <p class="footer-tagline">Boutique creative & marketing studio<br>based in Oakville, Ontario.</p>
+                </div>
+                <div>
+                    <p class="footer-col-title">Studio</p>
+                    <div class="footer-col-links">
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="services.html" class="footer-link">Services</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="footer-col-title">Connect</p>
+                    <div class="footer-col-links">
+                        <a href="https://instagram.com/aloralabsstudio" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+                        <a href="mailto:nivysekar@gmail.com" class="footer-link">Email Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Alora Labs. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/aloralabsstudio" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- /.page-wrap -->
+
+    <script src="script.js"></script>
+    <script src="animations.js" defer></script>
+    <script>
+        (function () {
+            var track   = document.getElementById('cases-track');
+            var btnPrev = document.getElementById('cases-prev');
+            var btnNext = document.getElementById('cases-next');
+            if (!track || !btnPrev || !btnNext) return;
+
+            var current = 0;
+
+            function cardWidth() {
+                var card = track.querySelector('.case-card');
+                return card ? card.offsetWidth : 0;
+            }
+
+            function totalCards() {
+                return track.querySelectorAll('.case-card').length;
+            }
+
+            function visibleCount() {
+                return window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+            }
+
+            function maxIndex() {
+                return Math.max(0, totalCards() - visibleCount());
+            }
+
+            function update() {
+                var offset = current * cardWidth();
+                track.style.transform = 'translateX(-' + offset + 'px)';
+                btnPrev.disabled = current === 0;
+                btnNext.disabled = current >= maxIndex();
+            }
+
+            btnPrev.addEventListener('click', function () {
+                if (current > 0) { current--; update(); }
+            });
+
+            btnNext.addEventListener('click', function () {
+                if (current < maxIndex()) { current++; update(); }
+            });
+
+            window.addEventListener('resize', function () {
+                current = Math.min(current, maxIndex());
+                update();
+            });
+
+            update();
+        })();
+    </script>
+</body>
+</html>

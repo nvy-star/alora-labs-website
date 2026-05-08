@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Alora Labs</title>
+    <!-- SEO -->
+    <meta name="description" content="Brand identity, website design, social media, content creation, and creative direction — studio-level creative services from Alora Labs, based in Oakville, ON.">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alora Labs">
+    <meta property="og:title" content="Services — Alora Labs">
+    <meta property="og:description" content="Branding, websites, social media strategy, content creation, and creative direction — senior-level creative services from Alora Labs.">
+    <meta property="og:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <meta property="og:url" content="https://aloralabs.xyz/services.html">
+    <meta property="og:locale" content="en_CA">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services — Alora Labs">
+    <meta name="twitter:description" content="Branding, websites, social media strategy, content creation, and creative direction — senior-level creative services from Alora Labs.">
+    <meta name="twitter:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/bundled/lenis.min.js" defer></script>
+</head>
+<body>
+    <!-- Announcement banner -->
+    <div class="announcement-banner" id="announcement-banner" role="banner">
+        <p class="announcement-text">Now booking for June &amp; July 2026</p>
+        <button class="announcement-close" id="announcement-close" aria-label="Close announcement">✕</button>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-dot"  aria-hidden="true"></div>
+
+    <!-- Film grain overlay -->
+    <canvas id="grain-canvas" aria-hidden="true"></canvas>
+
+    <!-- Page transition — split curtain -->
+    <div class="pt-top"    aria-hidden="true"></div>
+    <div class="pt-bottom" aria-hidden="true"></div>
+
+    <!-- Page wrap — animated on transition -->
+    <div class="page-wrap">
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Alora Labs</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </div>
+            <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="svc-hero">
+        <div class="svc-hero-frame">
+            <img src="Images/Hero3.jpg" alt="" class="svc-hero-img">
+            <div class="svc-hero-dim"></div>
+        </div>
+        <div class="svc-hero-label">
+            <h1 class="svc-hero-title">Services</h1>
+            <div class="svc-scroll-cue">
+                <span class="svc-scroll-word">Scroll</span>
+                <span class="svc-scroll-bar"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Panels -->
+    <div class="svc-panels" id="svc-panels">
+
+        <!-- ─── BRANDING ─── -->
+        <div class="svc-category-divider">
+            <span class="svc-category-label">Branding</span>
+        </div>
+
+        <!-- 01 — Brand Identity -->
+        <article class="svc-panel">
+            <div class="svc-panel-img">
+                <img src="Images/Design/FREE-010-October-November.png" alt="Brand Identity">
+            </div>
+            <div class="svc-panel-body">
+                <span class="svc-panel-n">01</span>
+                <h2 class="svc-panel-name">Full Brand & Web Package</h2>
+                <p class="svc-panel-price">Contact us for a quote</p>
+                <p class="svc-panel-about">
+                    Your brand is more than a logo — it's the complete visual system your business
+                    runs on. We craft comprehensive identity systems built to elevate every
+                    touchpoint, attract your ideal clients, and scale with your business.
+                </p>
+                <ul class="svc-panel-items">
+                    <li>Brand Discovery Session</li>
+                    <li>Creative Direction &amp; Moodboarding</li>
+                    <li>5 Logo Variations</li>
+                    <li>Typography Suite</li>
+                    <li>Colour Palette</li>
+                    <li>Brand Pattern &amp; Custom Icons</li>
+                    <li>Brand Style Guide</li>
+                    <li>A Fully Designed 3–5 Page Website</li>
+                    <li>2 Rounds of Revisions</li>
+                    <li>Final Files (PNG, SVG, PDF)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 02 — The Brand Experience -->
+        <article class="svc-panel svc-panel--flip">
+            <div class="svc-panel-img">
+                <img src="Images/Design/ALORALABS.png" alt="The Brand Experience">
+            </div>
+            <div class="svc-panel-body svc-panel-body--linen">
+                <span class="svc-panel-n">02</span>
+                <h2 class="svc-panel-name">The Brand Experience</h2>
+                <p class="svc-panel-price">Contact us for a quote</p>
+                <p class="svc-panel-about">
+                    A full-circle brand built to live on your socials. Everything in our Brand
+                    Identity package, plus all the assets you need to show up consistently
+                    and cohesively across Instagram. The complete package for brands ready to
+                    own every platform.
+                </p>
+                <ul class="svc-panel-items">
+                    <li>Full Brand Identity Package</li>
+                    <li>Instagram Highlight Covers</li>
+                    <li>5 Custom Feed Templates</li>
+                    <li>5 Custom Story Templates</li>
+                    <li>5 Branded GIFs</li>
+                    <li>Social Media Content Ideas &amp; Strategy</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 03 — Brand Intensive -->
+        <article class="svc-panel">
+            <div class="svc-panel-img">
+                <img src="Images/Design/KCRETREAT.png" alt="Brand Intensive">
+            </div>
+            <div class="svc-panel-body">
+                <span class="svc-panel-n">03</span>
+                <h2 class="svc-panel-name">Brand Intensive</h2>
+                <p class="svc-panel-price">Contact us for a quote</p>
+                <p class="svc-panel-about">
+                    A fast-track brand build for business owners ready to level up — now.
+                    In five focused days, we build a cohesive identity that captures your
+                    vision and gives you the confidence to show up fully. Delivered within 2 weeks.
+                </p>
+                <ul class="svc-panel-items">
+                    <li>Brand Discovery Session</li>
+                    <li>Creative Direction</li>
+                    <li>4 Logo Variations</li>
+                    <li>Typography Suite</li>
+                    <li>Colour Palette</li>
+                    <li>Brand Style Guide</li>
+                    <li>2 Rounds of Revisions</li>
+                    <li>Final Files (PNG, SVG, PDF)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 04 — Brand Collaterals -->
+        <article class="svc-panel svc-panel--flip">
+            <div class="svc-panel-img">
+                <img src="Images/Design/philo.png" alt="Design Collaterals" style="object-position: bottom;">
+            </div>
+            <div class="svc-panel-body svc-panel-body--linen">
+                <span class="svc-panel-n">04</span>
+                <h2 class="svc-panel-name">Design Collaterals</h2>
+                <p class="svc-panel-price">Contact us for a quote</p>
+                <p class="svc-panel-about">
+                    The details that make your brand unforgettable. Branded touchpoints that
+                    create consistency across your entire customer journey — from the first
+                    Instagram story to the business card left on the table.
+                </p>
+                <ul class="svc-panel-items">
+                    <li>Branded GIFs</li>
+                    <li>Social Media Feed &amp; Story Templates</li>
+                    <li>Business Cards</li>
+                    <li>Stickers &amp; Promotional Items</li>
+                    <li>Packaging Design</li>
+                    <li>Instagram Highlight Covers</li>
+                    <li>Signage &amp; Environmental Graphics</li>
+                    <li>Website Graphics</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ─── WEBSITE ─── -->
+        <div class="svc-category-divider">
+            <span class="svc-category-label">Website</span>
+        </div>
+
+        <!-- 05 — Website Design -->
+        <article class="svc-panel">
+            <div class="svc-panel-img">
+                <img src="Images/Graphic Design.jpg" alt="Website Design">
+            </div>
+            <div class="svc-panel-body">
+                <span class="svc-panel-n">05</span>
+                <h2 class="svc-panel-name">Website Design</h2>
+                <p class="svc-panel-price">Contact us for a quote</p>
+                <p class="svc-panel-about">
+                    It takes 0.05 seconds for a visitor to decide whether to stay or go.
+                    We design websites that stop that hesitation — strategically functional,
+                    aesthetically on-brand, and built to turn traffic into enquiries.
+                </p>
+                <ul class="svc-panel-items">
+                    <li>Brand Discovery Session</li>
+                    <li>Site Map &amp; Architecture</li>
+                    <li>Custom Website Design</li>
+                    <li>Up to 6 Pages</li>
+                    <li>Mobile Responsive Design</li>
+                    <li>3 Rounds of Refinements</li>
+                    <li>Domain Setup Assistance</li>
+                    <li>Post-Launch Guide</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ─── SOCIAL & CONTENT ─── -->
+        <div class="svc-category-divider">
+            <span class="svc-category-label">Social &amp; Content</span>
+        </div>
+
+        <!-- 06 — Social Media -->
+        <article class="svc-panel svc-panel--flip">
+            <div class="svc-panel-img">
+                <img src="Images/Social Media Strategy & Management.png" alt="Social Media">
+            </div>
+            <div class="svc-panel-body svc-panel-body--linen">
+                <span class="svc-panel-n">06</span>
+                <h2 class="svc-panel-name">Social Media</h2>
+                <p class="svc-panel-price">Contact us for a quote</p>
+                <p class="svc-panel-about">
+                    Done-for-you social that actually performs. We handle strategy, content
+                    creation, copywriting, and community management — so you can focus on
+                    running your business.
+                </p>
+                <ul class="svc-panel-items">
+                    <li>Monthly Strategy &amp; Content Call</li>
+                    <li>Custom Social Media Strategy</li>
+                    <li>Monthly Content Shoot Day</li>
+                    <li>Graphic Design &amp; Templates</li>
+                    <li>Caption Writing</li>
+                    <li>Content Scheduling</li>
+                    <li>Community Engagement</li>
+                    <li>Hashtag &amp; Keyword Strategy</li>
+                    <li>Monthly Analytics Report</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- 07 — Content Creation -->
+        <article class="svc-panel">
+            <div class="svc-panel-img">
+                <img src="Images/Photography & Video.jpg" alt="Content Creation">
+            </div>
+            <div class="svc-panel-body">
+                <span class="svc-panel-n">07</span>
+                <h2 class="svc-panel-name">Content Creation</h2>
+                <p class="svc-panel-price">Contact us for a quote</p>
+                <p class="svc-panel-about">
+                    Visuals that stop the scroll and tell your story. From editorial photography
+                    to product shoots and short-form video, we create content libraries built to
+                    perform across every platform.
+                </p>
+                <ul class="svc-panel-items">
+                    <li>Product &amp; Lifestyle Photography</li>
+                    <li>Editorial &amp; Commercial Shoots</li>
+                    <li>Reels &amp; Short-Form Video</li>
+                    <li>Photo Editing &amp; Retouching</li>
+                    <li>Content Library Development</li>
+                    <li>Full Usage Rights</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ─── CREATIVE ─── -->
+        <div class="svc-category-divider">
+            <span class="svc-category-label">Creative</span>
+        </div>
+
+        <!-- 08 — Creative Direction -->
+        <article class="svc-panel svc-panel--flip">
+            <div class="svc-panel-img">
+                <img src="Images/Creative Direction.jpg" alt="Creative Direction">
+            </div>
+            <div class="svc-panel-body svc-panel-body--linen">
+                <span class="svc-panel-n">08</span>
+                <h2 class="svc-panel-name">Creative Direction</h2>
+                <p class="svc-panel-price">Contact us for a quote</p>
+                <p class="svc-panel-about">
+                    When every touchpoint needs to feel cohesive, intentional, and elevated.
+                    We provide end-to-end creative oversight — from initial concept through
+                    final execution — ensuring your brand shows up exactly as it should.
+                </p>
+                <ul class="svc-panel-items">
+                    <li>Creative Vision &amp; Concept Development</li>
+                    <li>Moodboarding &amp; Art Direction</li>
+                    <li>Shoot Direction &amp; On-Set Styling</li>
+                    <li>Prop Sourcing &amp; Set Design</li>
+                    <li>Brand Alignment Review</li>
+                    <li>Post-Production Creative Oversight</li>
+                </ul>
+            </div>
+        </article>
+
+    </div><!-- /#svc-panels -->
+
+    <!-- CTA Band -->
+    <section class="cta-section">
+        <div class="cta-inner cta-content">
+            <div class="cta-text-col">
+                <h2 class="cta-title">Ready to get<br><em>started?</em></h2>
+                <p class="cta-sub">Let's discuss your project and find the right package for you.</p>
+            </div>
+            <div class="cta-action-col">
+                <a href="contact.html" class="btn btn--ghost-light">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Alora-&-Forma-branding.png" alt="Alora Labs" class="footer-logo-img">
+                    <p class="footer-tagline">Boutique creative & marketing studio<br>based in Oakville, Ontario.</p>
+                </div>
+                <div>
+                    <p class="footer-col-title">Studio</p>
+                    <div class="footer-col-links">
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="services.html" class="footer-link">Services</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="footer-col-title">Connect</p>
+                    <div class="footer-col-links">
+                        <a href="https://instagram.com/aloralabsstudio" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+                        <a href="mailto:nivysekar@gmail.com" class="footer-link">Email Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Alora Labs. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/aloralabsstudio" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- /.page-wrap -->
+
+    <script src="script.js"></script>
+    <script src="animations.js" defer></script>
+</body>
+</html>

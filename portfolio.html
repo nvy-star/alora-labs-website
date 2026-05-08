@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Alora Labs</title>
+    <!-- SEO -->
+    <meta name="description" content="Explore Alora Labs' portfolio — brand identities, social media campaigns, content creation, and creative direction for ambitious brands across Canada.">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alora Labs">
+    <meta property="og:title" content="Portfolio — Alora Labs">
+    <meta property="og:description" content="Selected work from Alora Labs — boutique creative & marketing studio based in Oakville, ON.">
+    <meta property="og:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <meta property="og:url" content="https://aloralabs.xyz/portfolio.html">
+    <meta property="og:locale" content="en_CA">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio — Alora Labs">
+    <meta name="twitter:description" content="Selected work from Alora Labs — boutique creative & marketing studio based in Oakville, ON.">
+    <meta name="twitter:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/bundled/lenis.min.js" defer></script>
+
+    <style>
+        /* ─────────────────────────────────────
+           CASE STUDIES SECTION
+        ───────────────────────────────────── */
+
+        .pf-case-studies {
+            padding: 0 0 var(--sp-xl);
+        }
+
+        .pf-section-header {
+            display: flex;
+            align-items: baseline;
+            gap: var(--sp-md);
+            border-bottom: var(--line);
+            padding: 120px 0 var(--sp-sm);
+            margin-bottom: var(--sp-lg);
+        }
+
+        .pf-section-label {
+            font-family: var(--font-body);
+            font-size: var(--size-label);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--bark);
+            flex-shrink: 0;
+        }
+
+        .pf-section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.1;
+        }
+
+        /* 3-column card grid */
+        .case-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .case-study-card {
+            border: var(--line);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .case-study-card-img {
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            flex-shrink: 0;
+        }
+
+        .case-study-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .case-study-card:hover .case-study-card-img img {
+            transform: scale(1.03);
+        }
+
+        .case-study-card-body {
+            padding: 1.5rem 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .case-study-service {
+            font-family: var(--font-display);
+            font-size: 10px;
+            font-style: italic;
+            font-weight: 300;
+            color: var(--bark);
+            letter-spacing: 0.04em;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study-client {
+            font-family: var(--font-display);
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            font-weight: 300;
+            color: var(--ink);
+            line-height: 1.25;
+            flex: 1;
+        }
+
+        .case-study-cta {
+            display: block;
+            text-align: right;
+            font-family: var(--font-body);
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--bark);
+            margin-top: 1.25rem;
+            transition: color var(--ease-base);
+        }
+
+        .case-study-card:hover .case-study-cta {
+            color: var(--ink);
+        }
+
+        /* ─────────────────────────────────────
+           GALLERY SECTION
+        ───────────────────────────────────── */
+
+        .pf-gallery {
+            padding: 0 0 var(--sp-xl);
+        }
+
+        .pf-gallery-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: var(--line);
+            padding-bottom: var(--sp-sm);
+            margin-bottom: var(--sp-lg);
+        }
+
+        .pf-gallery-tabs {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .pf-gallery-tab {
+            font-family: var(--font-body);
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--bark);
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            transition: color var(--ease-base);
+        }
+
+        .pf-gallery-tab.is-active {
+            color: var(--ink);
+        }
+
+        .pf-gallery-tab-divider {
+            font-family: var(--font-body);
+            font-size: 10px;
+            color: var(--sand);
+        }
+
+        /* Masonry via CSS columns */
+        .pf-gallery-panel {
+            column-count: 3;
+            column-gap: 16px;
+        }
+
+        .pf-gallery-item {
+            break-inside: avoid;
+            margin-bottom: 16px;
+            overflow: hidden;
+            display: block;
+        }
+
+        .pf-gallery-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 0.7s ease;
+        }
+
+        .pf-gallery-item:hover img {
+            transform: scale(1.03);
+        }
+
+        /* ─────────────────────────────────────
+           RESPONSIVE
+        ───────────────────────────────────── */
+
+        @media (max-width: 900px) {
+            .case-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pf-gallery-panel {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .case-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pf-gallery-panel {
+                column-count: 1;
+            }
+
+            .pf-section-header {
+                flex-direction: column;
+                gap: var(--sp-xs);
+            }
+        }
+
+        /* ── Lightbox ── */
+        .lb-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9000;
+            background: rgba(23, 19, 17, 0.96);
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+        .lb-overlay.is-open {
+            display: flex;
+        }
+        .lb-img-wrap {
+            position: relative;
+            max-width: 92vw;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: lbFadeIn 0.25s ease;
+        }
+        @keyframes lbFadeIn {
+            from { opacity: 0; transform: scale(0.96); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+        .lb-img {
+            display: block;
+            max-width: 92vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            cursor: default;
+        }
+        .lb-close {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.75rem;
+            background: none;
+            border: none;
+            color: rgba(245, 240, 232, 0.6);
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: color 0.2s;
+            z-index: 9001;
+            padding: 0.25rem;
+        }
+        .lb-close:hover { color: var(--cream); }
+        .lb-prev,
+        .lb-next {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: rgba(245, 240, 232, 0.5);
+            font-family: var(--font-body);
+            font-size: var(--size-label);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.2s;
+            z-index: 9001;
+            padding: 1rem;
+        }
+        .lb-prev { left: 1.5rem; }
+        .lb-next { right: 1.5rem; }
+        .lb-prev:hover,
+        .lb-next:hover { color: var(--cream); }
+
+        /* make gallery items show a zoom cursor */
+        .pf-gallery-item { cursor: zoom-in; }
+    </style>
+</head>
+<body>
+    <!-- Announcement banner -->
+    <div class="announcement-banner" id="announcement-banner" role="banner">
+        <p class="announcement-text">Now booking for June &amp; July 2026</p>
+        <button class="announcement-close" id="announcement-close" aria-label="Close announcement">✕</button>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-dot"  aria-hidden="true"></div>
+
+    <!-- Film grain overlay -->
+    <canvas id="grain-canvas" aria-hidden="true"></canvas>
+
+    <!-- Page transition — split curtain -->
+    <div class="pt-top"    aria-hidden="true"></div>
+    <div class="pt-bottom" aria-hidden="true"></div>
+
+    <!-- Page wrap — animated on transition -->
+    <div class="page-wrap">
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Alora Labs</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+            </div>
+            <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════════
+         SECTION 1: CASE STUDIES
+    ══════════════════════════════════ -->
+    <section class="pf-case-studies">
+        <div class="container">
+
+            <div class="pf-section-header">
+                <span class="pf-section-label">Case Studies</span>
+                <h1 class="pf-section-title">Selected Work</h1>
+            </div>
+
+            <div class="case-cards-grid">
+
+                <!-- Card 1 -->
+                <a href="kimberly-capone.html" class="case-study-card">
+                    <div class="case-study-card-img">
+                        <img src="Images/Design/Graphic%20Design.jpg" alt="Kimberly Capone Interior Design">
+                    </div>
+                    <div class="case-study-card-body">
+                        <p class="case-study-service">Brand Identity + Photography + Video + Social Media + Web Design</p>
+                        <h2 class="case-study-client">Kimberly Capone<br>Interior Design</h2>
+                        <span class="case-study-cta">View Case →</span>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="generations-marketplace.html" class="case-study-card">
+                    <div class="case-study-card-img">
+                        <img src="Images/Photography/Food%20%26%20Farm/1M9A0413.jpg" alt="Generations Marketplace">
+                    </div>
+                    <div class="case-study-card-body">
+                        <p class="case-study-service">Photography + Video + Social Media + Web Design</p>
+                        <h2 class="case-study-client">Generations<br>Marketplace</h2>
+                        <span class="case-study-cta">View Case →</span>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="forma-vintage.html" class="case-study-card">
+                    <div class="case-study-card-img">
+                        <img src="Images/Design/FREE-002-October-November.png" alt="Forma Vintage">
+                    </div>
+                    <div class="case-study-card-body">
+                        <p class="case-study-service">Brand Identity + Photography + Etsy</p>
+                        <h2 class="case-study-client">Forma<br>Vintage</h2>
+                        <span class="case-study-cta">View Case →</span>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="gillet-psychology.html" class="case-study-card">
+                    <div class="case-study-card-img">
+                        <img src="Images/Design/stationery-gillett.jpg" alt="Gillet Psychology">
+                    </div>
+                    <div class="case-study-card-body">
+                        <p class="case-study-service">Brand Identity + Print</p>
+                        <h2 class="case-study-client">Gillet<br>Psychology</h2>
+                        <span class="case-study-cta">View Case →</span>
+                    </div>
+                </a>
+
+                <!-- Card 5 -->
+                <a href="h3c.html" class="case-study-card">
+                    <div class="case-study-card-img">
+                        <img src="Images/Case%20studies/H3C/Branding/nexus.png" alt="H3C">
+                    </div>
+                    <div class="case-study-card-body">
+                        <p class="case-study-service">Presentation Design + Graphic Design</p>
+                        <h2 class="case-study-client">H3C</h2>
+                        <span class="case-study-cta">View Case →</span>
+                    </div>
+                </a>
+
+                <!-- Card 6 -->
+                <a href="alora-labs-brand.html" class="case-study-card">
+                    <div class="case-study-card-img">
+                        <img src="Images/Case%20studies/Alora%20Labs/Branding/ALORALABS.png" alt="Alora Labs Branding">
+                    </div>
+                    <div class="case-study-card-body">
+                        <p class="case-study-service">Brand Identity + Web Design + Social Media</p>
+                        <h2 class="case-study-client">Alora Labs</h2>
+                        <span class="case-study-cta">View Case →</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         SECTION 2: GALLERY
+    ══════════════════════════════════ -->
+    <section class="pf-gallery">
+        <div class="container">
+
+            <div class="pf-gallery-header">
+                <span class="pf-section-label">Gallery</span>
+                <div class="pf-gallery-tabs">
+                    <button class="pf-gallery-tab is-active" data-tab="design">Design</button>
+                    <span class="pf-gallery-tab-divider">|</span>
+                    <button class="pf-gallery-tab" data-tab="content">Content</button>
+                </div>
+            </div>
+
+            <!-- Design Panel -->
+            <div class="pf-gallery-panel" id="tab-design">
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/kcid.jpg" alt="KCID design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/ALORALABS.png" alt="Alora Labs design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/FREE-002-October-November.png" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/casp.jpg" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/nexus.png" alt="Nexus design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/stationery-gillett.jpg" alt="Stationery design — Gillett">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/0d4e1082078853.5d129d4b73f7f.jpg" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/MOMO.png" alt="MOMO design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/wedding-invitation-handmade-paper-mockup.jpg" alt="Wedding invitation design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/momoko.jpg" alt="Momoko design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/FREE-004-October-November.png" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/Vertical-Invitation-Cards-Brand-Stationery-Free-psd-Mockup.png" alt="Stationery mockup">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/Brand%20Identity.jpg" alt="Brand identity">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/KCRETREAT.png" alt="KC Retreat design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/FREE-010-October-November.png" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/sunsets.jpg" alt="Sunsets design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/10533a8b-0278-43d5-afc6-7b4e489fe55d_rw_1200.png" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/variations%20for%20Gillett.jpg" alt="Gillett variations">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/macbook-pro-2015-psd-mockup%20copy.gif" alt="Web design mockup">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/Social%20Media%20Strategy%20%26%20Management.png" alt="Social media strategy design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/Graphic%20Design.jpg" alt="Graphic design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/gmgraphic.png" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/philo.png" alt="Philo design">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/wild2.png" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/darelogo.png" alt="Design work">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/primpedmockupjpg.jpg" alt="Design mockup">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Design/gmgraphic2.png" alt="Design work">
+                </div>
+            </div>
+
+            <!-- Content Panel (hidden by default) -->
+            <div class="pf-gallery-panel" id="tab-content" style="display:none;">
+
+                <!-- Fashion -->
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Fashion/tanisq.jpg" alt="Fashion photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Fashion/pic-16x10.jpg" alt="Fashion photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Fashion/final_pic_2-copy.jpg" alt="Fashion photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Fashion/large_572462_uvrohtcc2cjv_m6vxwbjjuyhh.jpg" alt="Fashion photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Fashion/c495efcd-3c24-42c6-97ad-18000f35b153_rw_1920.jpg" alt="Fashion photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Fashion/2018-05-06%2023%3A35%3A54.871.jpg" alt="Fashion photography">
+                </div>
+
+                <!-- Food & Farm -->
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/1M9A0014.jpg" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/1M9A0076-2.jpg" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/1M9A0141.jpg" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/1M9A0145.jpg" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/1M9A0413.jpg" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/1M9A1856.jpg" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/1M9A1881.jpg" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/1M9A2718.jpg" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/3.png" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/6.png" alt="Food & Farm photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/Creative%20Direction.jpg" alt="Creative direction">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/Generations.jpg" alt="Generations">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Food%20%26%20Farm/Hero2.jpg" alt="Photography">
+                </div>
+
+                <!-- Interiors -->
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/1M9A2863.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/1M9A8585.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/1M9A8608%20copy.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/1M9A8648%20copy.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/Hero1.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/Hero4.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/0ce6915c-b30e-4cae-93b8-71330ac2cc5f_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/0e42abaa-2ff3-4848-bb6d-9e8e27e3b16e_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/1dbe70d3-6672-4802-911b-4fb07d5337a2_rw_1200.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/291c579c-77e6-4422-989b-7db7fd20126e.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/3da9804f-7509-46c8-9b9c-14b39f7a0325_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/41026fef-bf09-476e-98bb-df9204e139dc_rw_1200.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/648aeee0-4bcf-439e-9b9a-fd1b752020bb_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/65115411_2460648554156361_2883734810260406272_o.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/6ac285eb-5b45-47a5-ac89-1276dd0a2bef_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/8c8481f5-99d3-4554-962d-ee8630839e26_rw_1200.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/aee4b1a8-3883-4ee0-bc0a-b1b4fec44247_rw_1200.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/af6ab388-1a95-4b24-b0b2-c37980f58a80_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/bad0aacb-8284-4d0f-844d-d1614c470ffa_rw_1200.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/d3bb69d1-3bac-4002-8da6-9ca5ce81f459_rw_1200.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/eb0179db-7e03-49cb-a23f-1c518bc54dba_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/f25ee5bf-d158-457c-a53d-89b98075cbe1_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/f62e9fff-e04e-4346-9b66-eecdd6c3c782_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/ffd66296-8c3b-44b2-97be-2313afd27373_rw_1920.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/fl5%20copy.jpg" alt="Interior photography">
+                </div>
+                <div class="pf-gallery-item">
+                    <img src="Images/Photography/Interiors/Photography%20%26%20Video.jpg" alt="Photography & Video">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Alora-&-Forma-branding.png" alt="Alora Labs" class="footer-logo-img">
+                    <p class="footer-tagline">Boutique creative & marketing studio<br>based in Oakville, Ontario.</p>
+                </div>
+                <div>
+                    <p class="footer-col-title">Studio</p>
+                    <div class="footer-col-links">
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="services.html" class="footer-link">Services</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="footer-col-title">Connect</p>
+                    <div class="footer-col-links">
+                        <a href="https://instagram.com/aloralabsstudio" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+                        <a href="mailto:nivysekar@gmail.com" class="footer-link">Email Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Alora Labs. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/aloralabsstudio" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- /.page-wrap -->
+
+    <!-- Lightbox -->
+    <div class="lb-overlay" id="lb-overlay" role="dialog" aria-modal="true" aria-label="Image lightbox">
+        <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+        <button class="lb-prev" id="lb-prev" aria-label="Previous image">← Prev</button>
+        <div class="lb-img-wrap">
+            <img class="lb-img" id="lb-img" src="" alt="">
+        </div>
+        <button class="lb-next" id="lb-next" aria-label="Next image">Next →</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="animations.js" defer></script>
+    <script>
+        (function () {
+            // ── Tab switcher ──
+            function initTabs() {
+                const tabs   = document.querySelectorAll('.pf-gallery-tab');
+                const panels = {
+                    design:  document.getElementById('tab-design'),
+                    content: document.getElementById('tab-content'),
+                };
+
+                tabs.forEach(function (tab) {
+                    tab.addEventListener('click', function () {
+                        const target = tab.dataset.tab;
+                        const currentPanel = Object.values(panels).find(function (p) {
+                            return p.style.display !== 'none';
+                        });
+                        const nextPanel = panels[target];
+
+                        if (currentPanel === nextPanel) return;
+
+                        tabs.forEach(function (t) { t.classList.remove('is-active'); });
+                        tab.classList.add('is-active');
+
+                        currentPanel.style.display = 'none';
+                        nextPanel.style.display = 'block';
+                    });
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initTabs);
+            } else {
+                initTabs();
+            }
+        })();
+
+        // ── Lightbox ──
+        (function () {
+            const overlay = document.getElementById('lb-overlay');
+            const lbImg   = document.getElementById('lb-img');
+            const btnClose = document.getElementById('lb-close');
+            const btnPrev  = document.getElementById('lb-prev');
+            const btnNext  = document.getElementById('lb-next');
+
+            let images = [];   // all gallery img elements
+            let current = 0;
+
+            function buildImageList() {
+                // Collect all visible gallery images (active panel only)
+                const visiblePanel = document.querySelector('.pf-gallery-panel[style="display: block;"], .pf-gallery-panel:not([style*="none"])');
+                if (!visiblePanel) return;
+                images = Array.from(visiblePanel.querySelectorAll('.pf-gallery-item img'));
+            }
+
+            function open(index) {
+                buildImageList();
+                current = index;
+                show();
+                overlay.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function close() {
+                overlay.classList.remove('is-open');
+                document.body.style.overflow = '';
+            }
+
+            function show() {
+                if (!images.length) return;
+                lbImg.src = images[current].src;
+                lbImg.alt = images[current].alt;
+                // Animate swap
+                lbImg.style.opacity = '0';
+                lbImg.onload = function () {
+                    lbImg.style.transition = 'opacity 0.2s';
+                    lbImg.style.opacity = '1';
+                };
+                btnPrev.style.display = images.length > 1 ? '' : 'none';
+                btnNext.style.display = images.length > 1 ? '' : 'none';
+            }
+
+            function prev() {
+                current = (current - 1 + images.length) % images.length;
+                show();
+            }
+
+            function next() {
+                current = (current + 1) % images.length;
+                show();
+            }
+
+            // Click on gallery items
+            document.querySelectorAll('.pf-gallery-item').forEach(function (item, idx) {
+                item.addEventListener('click', function () {
+                    // Recalculate index within current panel
+                    buildImageList();
+                    const img = item.querySelector('img');
+                    const i = images.indexOf(img);
+                    open(i >= 0 ? i : 0);
+                });
+            });
+
+            // Close on overlay background click
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) close();
+            });
+
+            btnClose.addEventListener('click', close);
+            btnPrev.addEventListener('click', function (e) { e.stopPropagation(); prev(); });
+            btnNext.addEventListener('click', function (e) { e.stopPropagation(); next(); });
+
+            // Keyboard
+            document.addEventListener('keydown', function (e) {
+                if (!overlay.classList.contains('is-open')) return;
+                if (e.key === 'Escape')      close();
+                if (e.key === 'ArrowLeft')   prev();
+                if (e.key === 'ArrowRight')  next();
+            });
+
+            // Rebuild image list when tabs switch so indices stay correct
+            document.querySelectorAll('.pf-gallery-tab').forEach(function (tab) {
+                tab.addEventListener('click', function () { images = []; });
+            });
+        })();
+    </script>
+</body>
+</html>

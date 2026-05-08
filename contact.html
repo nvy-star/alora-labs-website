@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Alora Labs</title>
+    <!-- SEO -->
+    <meta name="description" content="Ready to elevate your brand? Get in touch with Alora Labs — a boutique creative studio based in Oakville, ON serving clients across Canada and beyond.">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alora Labs">
+    <meta property="og:title" content="Contact — Alora Labs">
+    <meta property="og:description" content="Ready to elevate your brand? Get in touch with Alora Labs — a boutique creative studio based in Oakville, ON serving clients across Canada and beyond.">
+    <meta property="og:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <meta property="og:url" content="https://aloralabs.xyz/contact.html">
+    <meta property="og:locale" content="en_CA">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact — Alora Labs">
+    <meta name="twitter:description" content="Ready to elevate your brand? Get in touch with Alora Labs — a boutique creative studio based in Oakville, ON serving clients across Canada and beyond.">
+    <meta name="twitter:image" content="https://aloralabs.xyz/Images/Hero1.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/bundled/lenis.min.js" defer></script>
+</head>
+<body>
+    <!-- Announcement banner -->
+    <div class="announcement-banner" id="announcement-banner" role="banner">
+        <p class="announcement-text">Now booking for June &amp; July 2026</p>
+        <button class="announcement-close" id="announcement-close" aria-label="Close announcement">✕</button>
+    </div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="cursor-dot"  aria-hidden="true"></div>
+
+    <!-- Film grain overlay -->
+    <canvas id="grain-canvas" aria-hidden="true"></canvas>
+
+    <!-- Page transition — split curtain -->
+    <div class="pt-top"    aria-hidden="true"></div>
+    <div class="pt-bottom" aria-hidden="true"></div>
+
+    <!-- Page wrap — animated on transition -->
+    <div class="page-wrap">
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Alora Labs</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </div>
+            <a href="contact.html" class="nav-contact-btn active">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Contact image -->
+    <div class="contact-hero-img">
+        <img src="Images/contact.png" alt="Alora Labs studio">
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="label">Get in Touch</span>
+            <h1 class="page-title">Let's create<br><em>together.</em></h1>
+            <p class="page-subtitle">
+                Whether you're launching something new or elevating an established presence,
+                we'd love to hear about your vision.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-info-block">
+                        <h3 class="contact-info-title">Email</h3>
+                        <a href="mailto:nivysekar@gmail.com" class="contact-info-link">nivysekar@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-info-block">
+                        <h3 class="contact-info-title">Based In</h3>
+                        <p class="contact-info-text">Oakville, ON</p>
+                        <p class="contact-info-text">Greater Toronto Area</p>
+                    </div>
+                    
+                    <div class="contact-info-block">
+                        <h3 class="contact-info-title">Follow</h3>
+                        <a href="https://instagram.com/aloralabsstudio" class="contact-info-link" target="_blank">Instagram</a>
+                    </div>
+
+                    <div class="contact-info-block">
+                        <h3 class="contact-info-title">Services</h3>
+                        <p class="contact-info-text">Branding</p>
+                        <p class="contact-info-text">Website Design</p>
+                        <p class="contact-info-text">Social Media</p>
+                        <p class="contact-info-text">Content Creation</p>
+                        <p class="contact-info-text">Creative Direction</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company</label>
+                            <input type="text" id="company" name="company" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="services" class="form-label">Services Interested In</label>
+                            <select id="services" name="services" class="form-select">
+                                <option value="">Select a service</option>
+                                <option value="branding">Branding</option>
+                                <option value="website-design">Website Design</option>
+                                <option value="social-media">Social Media</option>
+                                <option value="content-creation">Content Creation</option>
+                                <option value="creative-direction">Creative Direction</option>
+                                <option value="multiple">Multiple Services</option>
+                                <option value="not-sure">Not Sure Yet</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Budget Range</label>
+                            <select id="budget" name="budget" class="form-select">
+                                <option value="">Select a range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-plus">$25,000+</option>
+                                <option value="ongoing">Ongoing Retainer</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Tell us about your project</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--filled btn-full">Send Message</button>
+
+                        <p class="form-note">
+                            We typically respond within 24-48 hours. Looking forward to hearing from you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">FAQ</span>
+                <h2 class="page-title" style="font-size: clamp(2rem, 4vw, 3.5rem); color: var(--cream);">Common questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">What types of projects do you take on?</h3>
+                    <p class="faq-answer">
+                        We work with ambitious brands across industries — from startups launching 
+                        new ventures to established businesses looking to elevate their presence. 
+                        Our sweet spot is comprehensive brand and marketing projects where we can 
+                        apply our full range of expertise.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What's your project timeline?</h3>
+                    <p class="faq-answer">
+                        Timelines vary based on scope. Brand identity projects typically take 4-8 weeks, 
+                        while ongoing marketing retainers are month-to-month. We'll provide a detailed 
+                        timeline during our initial consultation.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you work with clients outside Ontario?</h3>
+                    <p class="faq-answer">
+                        Absolutely. While we're based in the Greater Toronto Area, we work with clients 
+                        across Canada and internationally. Most of our collaboration happens remotely, 
+                        with in-person sessions available for local clients.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What's your pricing structure?</h3>
+                    <p class="faq-answer">
+                        We offer both project-based and retainer pricing depending on your needs. 
+                        After our initial consultation, we'll provide a detailed proposal outlining 
+                        scope, timeline, and investment. We believe in transparent pricing with no 
+                        hidden fees.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Can you help with an existing brand refresh?</h3>
+                    <p class="faq-answer">
+                        Yes! We love helping established brands evolve and refine their presence. 
+                        Whether you need a subtle refresh or a complete transformation, we'll develop 
+                        a strategy that honors your heritage while positioning you for future growth.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What makes Alora Labs different?</h3>
+                    <p class="faq-answer">
+                        We bring senior-level expertise with a boutique approach. You're working 
+                        directly with an experienced creative director and marketer, not a junior 
+                        team. We pair strategic thinking with artistic vision, and we're personally 
+                        invested in your success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="Alora-&-Forma-branding.png" alt="Alora Labs" class="footer-logo-img">
+                    <p class="footer-tagline">Boutique creative & marketing studio<br>based in Oakville, Ontario.</p>
+                </div>
+                <div>
+                    <p class="footer-col-title">Studio</p>
+                    <div class="footer-col-links">
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="services.html" class="footer-link">Services</a>
+                        <a href="portfolio.html" class="footer-link">Portfolio</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="footer-col-title">Connect</p>
+                    <div class="footer-col-links">
+                        <a href="https://instagram.com/aloralabsstudio" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+                        <a href="mailto:nivysekar@gmail.com" class="footer-link">Email Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Alora Labs. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/aloralabsstudio" class="footer-social-link" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div><!-- /.page-wrap -->
+
+    <script src="script.js"></script>
+    <script src="contact-form.js"></script>
+    <script src="animations.js" defer></script>
+</body>
+</html>
