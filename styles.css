@@ -1845,11 +1845,18 @@ section {
   .footer-top {
     grid-template-columns: 1fr;
     gap: var(--sp-md);
+    text-align: center;
+  }
+
+  .footer-top .footer-col-links {
+    align-items: center;
   }
 
   .footer-bottom {
     flex-direction: column;
+    align-items: center;
     gap: var(--sp-sm);
+    text-align: center;
   }
 
   .case-card { flex: 0 0 100%; }
