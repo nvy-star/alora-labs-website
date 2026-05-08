@@ -1783,7 +1783,7 @@ section {
   }
 
   /* Services */
-  .services-list-header { flex-direction: column; align-items: flex-start; gap: var(--sp-sm); }
+  .services-list-header { flex-direction: column; align-items: center; gap: var(--sp-sm); text-align: center; }
   .services-list-header .btn { display: none; }
   .sl-cta { display: flex; justify-content: center; }
 
