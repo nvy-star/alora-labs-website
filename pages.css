@@ -165,6 +165,7 @@
 
 @media (max-width: 1024px) {
     .svc-hero-frame { transform: none; }
+    .svc-hero-label { z-index: 3; }
 }
 
 /* ─── Category Dividers ─────────────────────── */

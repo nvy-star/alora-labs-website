@@ -68,3 +68,51 @@ window.addEventListener('scroll', () => {
 });
 
 // NOTE: Parallax for hero orbs is handled by animations.js (smooth organic float + scroll depth).
+
+// Mobile hamburger menu
+(function () {
+    const hamburger = document.getElementById('nav-hamburger');
+    const drawer    = document.getElementById('nav-drawer');
+    const backdrop  = document.getElementById('nav-drawer-backdrop');
+
+    if (!hamburger || !drawer || !backdrop) return;
+
+    function openDrawer() {
+        hamburger.classList.add('is-open');
+        drawer.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+        hamburger.classList.remove('is-open');
+        drawer.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', function () {
+        if (drawer.classList.contains('is-open')) {
+            closeDrawer();
+        } else {
+            openDrawer();
+        }
+    });
+
+    backdrop.addEventListener('click', closeDrawer);
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+            closeDrawer();
+        }
+    });
+
+    // Close drawer when a link inside is clicked
+    drawer.querySelectorAll('.nav-drawer-link').forEach(function (link) {
+        link.addEventListener('click', closeDrawer);
+    });
+}());
