@@ -1784,6 +1784,8 @@ section {
 
   /* Services */
   .services-list-header { flex-direction: column; align-items: flex-start; gap: var(--sp-sm); }
+  .services-list-header .btn { display: none; }
+  .sl-cta { display: flex; justify-content: center; }
 
   .sl-float-img { display: none; }
 
