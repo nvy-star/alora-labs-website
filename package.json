@@ -1,0 +1,23 @@
+{
+  "name": "alora-labs-website",
+  "version": "1.0.0",
+  "description": "Boutique creative & marketing studio based in Oakville, Ontario.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvy-star/alora-labs-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvy-star/alora-labs-website/issues"
+  },
+  "homepage": "https://github.com/nvy-star/alora-labs-website#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
